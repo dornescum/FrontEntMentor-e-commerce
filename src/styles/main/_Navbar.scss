@@ -1,0 +1,48 @@
+.navbar {
+  @include flex-sb;
+  padding: 2rem 0 2rem 0;
+
+  border-bottom: 1px solid $l-grey;
+
+  .navbar-left {
+    @include flex-start;
+      .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    .navbar-links {
+      list-style-type: none;
+      @include display_flex;
+      margin: 0;
+      .links-li {
+        padding: 1rem;
+        text-transform: capitalize;
+        color: $b-grey;
+        font-size: $font-base;
+      }
+    }
+
+    .btn-sidebar{
+      display: none;
+    }
+  }
+
+
+  .navbar-right{
+    @include flex-end;
+
+    .cart-navbar{
+      @include flex-img;
+      padding: .1rem 3rem 0 0;
+    }
+    .user-picture{
+      @include flex-img;
+      img{
+        height: 4rem;
+        width: 4rem;
+        padding:0 5px 0 0;
+      }
+    }
+  }
+}

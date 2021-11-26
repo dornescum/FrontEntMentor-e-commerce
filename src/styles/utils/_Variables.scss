@@ -1,11 +1,22 @@
-$blue:hsl(215, 51%, 70%);
-$cyan: hsl(178, 100%, 50%);
+$orange :hsl(26, 100%, 55%);
+$l-orange:hsl(25, 100%, 94%);
 
-$blue-main: hsl(217, 54%, 11%);
-$blue-card:hsl(216, 50%, 16%);
-$blue-line:hsl(215, 32%, 27%);
+
+$blue-main:hsl(220, 13%, 13%);
+$grey: hsl(219, 9%, 45%);
+$b-grey:hsl(220, 14%, 75%);
+$l-grey:hsl(223, 64%, 98%);
+
 $white: hsl(0, 0%, 100%);
+$black:hsl(0, 0%, 75%);
 
+$box-light: 3px 15px 15px hsl(25, 100%, 94%);
+$box-dark: 3px 7px 20px hsl(26, 100%, 55%);
 
 $radius: 1rem;
 $transition: all .3s ease;
+$letter-spacing: 1.2px;
+
+$font-base:1rem;
+$font-sm: 0.75* 1rem;
+$font-lg: 3.5* 1rem;

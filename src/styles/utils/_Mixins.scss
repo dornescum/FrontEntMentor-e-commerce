@@ -21,9 +21,15 @@
 @mixin flex-start {
   display: flex;
   justify-content:flex-start;
+  align-content: center;
 }
 @mixin flex-self{
   display: flex;
   justify-self: center;
   align-self: center;
+}
+@mixin flex-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
