@@ -24,6 +24,9 @@ const TheNavbar = () => {
 			</div>
 			<div className='navbar-right'>
 				<div className="cart-navbar" data-testid='cart-image'>
+					<div>
+						{initialValue}
+					</div>
 					<img src={cart} alt="cart image"/>
 				</div>
 				<div className="user-picture" data-testid='user-picture'>
