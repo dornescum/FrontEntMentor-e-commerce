@@ -1,0 +1,17 @@
+
+.show-modal {
+  display: block;
+  /*background: var(--background);*/
+  height: 13vh;
+  border-radius: var(--radius);
+  cursor: not-allowed;
+}
+
+.show-modal img {
+  height: 30rem;
+  width: 100%;
+}
+
+.hide-modal {
+  display: none;
+}

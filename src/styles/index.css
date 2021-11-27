@@ -1017,5 +1017,51 @@ a {
   box-shadow: 3px 7px 20px #ff7d1a;
   transition: all 0.3s ease;
 }
+#home .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  cursor: pointer;
+}
+#home .overlay-img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  z-index: 11;
+}
+#home .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.show-modal {
+  display: block;
+  /*background: var(--background);*/
+  height: 13vh;
+  border-radius: var(--radius);
+  cursor: not-allowed;
+}
+
+.show-modal img {
+  height: 30rem;
+  width: 100%;
+}
+
+.hide-modal {
+  display: none;
+}
 
 /*# sourceMappingURL=index.css.map */
