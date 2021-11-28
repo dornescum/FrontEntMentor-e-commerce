@@ -3,15 +3,37 @@ import {ValueContext} from "../../context/ValueContext";
 import logo from '../../images/logo.svg';
 import cart from '../../images/icon-cart.svg';
 import user from '../../images/image-avatar.png';
+import {MdClose, MdDehaze} from "react-icons/md";
+import Backdrop from "./BackDrop";
 
 const navbarCategories =['collections', 'men', 'women', 'about', 'contact'];
 
 const TheNavbar = () => {
-	const {initialValue, setInitialValue} = useContext(ValueContext);
-	console.log(initialValue);
+	const {initialValue, setInitialValue, showSidebar, setShowSidebar} = useContext(ValueContext);
+	// console.log(initialValue);
+	// console.log(showSidebar);
+	const handleSidebar=()=>{
+		setShowSidebar(!showSidebar)
+	}
 	return (
 		<nav className='navbar'>
 			<div className='navbar-left'>
+				<button className='btn btn-sidebar' onClick={handleSidebar}>
+					<MdDehaze />
+				</button>
+				{showSidebar && <aside className={showSidebar ? 'active-sidebar': 'aside'}>
+					<div>
+						<button onClick={handleSidebar} id='close-sidebar'>
+							<MdClose />
+						</button>
+					</div>
+					<ul>
+						{navbarCategories.map((el, index)=>{
+							return <li key={index} >{el}</li>
+						})}
+					</ul>
+				</aside>}
+				{showSidebar && <Backdrop onClick={handleSidebar}/>}
 				<div className="logo">
 					<img src={logo} alt="some logo"/>
 				</div>
@@ -20,7 +42,7 @@ const TheNavbar = () => {
 						return <li key={index} className='links-li'>{el}</li>
 					})}
 				</ul>
-				<button className='btn btn-sidebar'>X</button>
+
 			</div>
 			<div className='navbar-right'>
 				<div className="cart-navbar" data-testid='cart-image'>

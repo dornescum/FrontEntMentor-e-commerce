@@ -15,16 +15,25 @@
       list-style-type: none;
       @include display_flex;
       margin: 0;
+      @media (max-width: $xs){
+        display: none;
+      }
       .links-li {
         padding: 1rem;
         text-transform: capitalize;
         color: $grey;
         font-size: $font-base;
+
       }
     }
 
     .btn-sidebar{
       display: none;
+      @media (max-width: $xs){
+        display: block;
+        background: $white;
+        padding: 8px 10px 0 0;
+      }
     }
   }
 

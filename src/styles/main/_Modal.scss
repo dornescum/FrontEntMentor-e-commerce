@@ -1,17 +1,112 @@
+.modal-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .thumb-modal {
+    @include display_flex;
+    padding: 1rem;
+
+    img {
+      border: 2px solid transparent;
+      border-radius: $radius;
+      margin: 1rem;
+      width: 6rem;
+      height: 6rem;
+    }
+
+    .blur-img{
+      opacity: 0.8;
+      border: 4px solid $orange;
+    }
+  }
+
+
+  .close-modal {
+    position: absolute;
+    top: 6rem;
+    right: 42rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    svg{
+      path {
+        fill: $white;
+      }
+    }
+    &:hover{
+      svg{
+        path {
+          fill: $orange;
+        }
+      }
+    }
+  }
+
+  .left-btn-modal {
+    position: absolute;
+    display: block;
+    top: 26rem;
+    left: 40.5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    padding: 15px 5px 20px 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    &:hover{
+      svg{
+        path {
+            stroke: $orange;
+        }
+      }
+    }
+  }
+
+  .right-btn-modal {
+    position: absolute;
+    display: block;
+    top: 26rem;
+    right: 40.5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    padding: 15px 0 20px 3px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    &:hover{
+      svg{
+        path {
+          stroke: $orange;
+        }
+      }
+    }
+  }
+}
+
 
 .show-modal {
-  display: block;
-  /*background: var(--background);*/
-  height: 13vh;
-  border-radius: var(--radius);
-  cursor: not-allowed;
+  @include display_flex;
+  margin: 10rem 0 0 0;
+
+  .modal-main {
+    .modal-img {
+      display: none;
+    }
+
+    .active-modal-img {
+      display: block;
+      height: 35rem;
+      width: 35rem;
+      border-radius: $radius;
+    }
+
+  }
 }
 
-.show-modal img {
-  height: 30rem;
-  width: 100%;
-}
 
-.hide-modal {
-  display: none;
-}
+
+

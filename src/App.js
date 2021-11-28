@@ -2,20 +2,18 @@ import React, {useState} from "react";
 import TheNavbar from "./components/UI/TheNavbar";
 import Home from "./components/Home";
 import {ValueContext} from "./context/ValueContext";
-import { FaTimes} from "react-icons/fa";
 
 function App() {
     const [initialValue, setInitialValue]=useState(0);
-	const [showModal, setShowModal] = useState(true);
-	const handlerModal = () => {
-		setShowModal(false);
-	};
+	const [showSidebar, setShowSidebar] = useState(false);
+	const [showModal, setShowModal] = useState(false);
+
 
 
 	return (
-		<ValueContext.Provider value={{initialValue, setInitialValue}} >
+		<ValueContext.Provider value={{initialValue, setInitialValue, showSidebar, setShowSidebar, showModal, setShowModal}} >
 			<div className="container">
-				<TheNavbar/>
+				<TheNavbar />
 				{/*fixme overlay*/}
 				<Home />
 			</div>
