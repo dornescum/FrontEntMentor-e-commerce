@@ -811,12 +811,16 @@ a {
   }
 }
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  padding: 2rem 0 2rem 0;
   position: relative;
   border-bottom: 1px solid #f7f8fd;
+}
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
 }
 .navbar .navbar-left {
   position: relative;
@@ -848,7 +852,6 @@ a {
   color: #68707d;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 .navbar .navbar-left .navbar-links .links-li:hover {
   border-bottom: 5px solid #ff7d1a;
@@ -866,6 +869,7 @@ a {
 .navbar .navbar-right {
   display: flex;
   justify-content: flex-end;
+  padding: 2rem 0 2rem 0;
 }
 .navbar .navbar-right .cart-navbar {
   display: flex;
@@ -873,6 +877,11 @@ a {
   align-items: center;
   padding: 0.1rem 3rem 0 0;
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  .navbar .navbar-right .cart-navbar {
+    padding: 0.1rem 1rem 0 0;
+  }
 }
 .navbar .navbar-right .cart-navbar .cart-value {
   background: #ff7d1a;
@@ -896,6 +905,12 @@ a {
   width: 4rem;
   padding: 0 5px 0 0;
 }
+@media (max-width: 480px) {
+  .navbar .navbar-right .user-picture img {
+    height: 3rem;
+    width: 3rem;
+  }
+}
 .navbar .show-card {
   position: absolute;
   top: 7rem;
@@ -907,6 +922,12 @@ a {
   flex-direction: column;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
+}
+@media (max-width: 480px) {
+  .navbar .show-card {
+    right: -10px;
+    top: 9.5rem;
+  }
 }
 .navbar .show-card .empty-cart {
   display: flex;
@@ -976,6 +997,12 @@ a {
   padding: 1rem;
   margin: 1rem;
 }
+@media (max-width: 480px) {
+  #home .wrapper {
+    margin: 0;
+    padding: 0;
+  }
+}
 #home .wrapper .main-img {
   padding: 1rem 0;
   margin: 1rem 0;
@@ -986,11 +1013,23 @@ a {
   height: 31rem;
   border-radius: 1rem;
 }
+@media (max-width: 480px) {
+  #home .wrapper .main-img .active-img {
+    width: 23rem;
+    height: 23rem;
+    border-radius: 0;
+  }
+}
 #home .wrapper .multiple-img {
   display: flex;
   justify-content: center;
   align-content: center;
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  #home .wrapper .multiple-img {
+    display: none;
+  }
 }
 #home .wrapper .multiple-img .thumb {
   padding: 1.2rem;
@@ -1028,46 +1067,88 @@ a {
   padding: 2rem;
   margin: 2rem;
 }
+@media (max-width: 480px) {
+  #home article {
+    padding: 10px;
+    margin: 10px;
+  }
+}
 #home article h5 {
   padding: 2rem 0 1rem 0;
   color: #ff7d1a;
   font-weight: bolder;
 }
+@media (max-width: 480px) {
+  #home article h5 {
+    padding: 0 0 1rem 0;
+  }
+}
 #home article .article-title {
   font-weight: bolder;
   font-size: 3.5rem;
   letter-spacing: 1.2px;
+  text-transform: capitalize;
+}
+@media (max-width: 480px) {
+  #home article .article-title {
+    font-size: 2rem;
+  }
 }
 #home article .article-title p {
   line-height: 55px;
   margin: 0 0 2rem 0;
 }
+@media (max-width: 480px) {
+  #home article .article-title p {
+    line-height: 38px;
+  }
+}
 #home article .article-description {
   color: #68707d;
   font-size: 23px;
 }
+@media (max-width: 480px) {
+  #home article .article-description {
+    font-size: 15px;
+  }
+}
 #home article .article-description p {
   line-height: 33px;
 }
+@media (max-width: 480px) {
+  #home article .article-description p {
+    line-height: 27px;
+  }
+}
 #home article .article-price {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 480px) {
+  #home article .article-price {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+#home article .article-price .new-price {
   display: flex;
   justify-content: flex-start;
   align-content: center;
 }
-#home article .article-price .latest-price {
+#home article .article-price .new-price .latest-price {
   font-size: 28px;
   padding: 5px 20px 5px 0;
   font-weight: bolder;
 }
-#home article .article-price .latest-price p {
+#home article .article-price .new-price .latest-price p {
   margin: 0;
 }
-#home article .article-price .deduction {
+#home article .article-price .new-price .deduction {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#home article .article-price .deduction p {
+#home article .article-price .new-price .deduction p {
   background: #ffede0;
   color: #ff7d1a;
   padding: 5px 10px;
@@ -1076,15 +1157,25 @@ a {
   margin: 0;
   font-size: 25px;
 }
-#home article .article-old-price {
+#home article .article-price .article-old-price {
   color: #b6bcc8;
   font-weight: bolder;
 }
-#home article .article-old-price p {
+#home article .article-price .article-old-price p {
   text-decoration: line-through;
+}
+@media (max-width: 480px) {
+  #home article .article-price .article-old-price p {
+    margin: 8px 0 5px 20px;
+  }
 }
 #home article .article-footer {
   display: flex;
+}
+@media (max-width: 480px) {
+  #home article .article-footer {
+    flex-direction: column;
+  }
 }
 #home article .article-footer .item-value {
   padding: 1.1rem 1rem;
@@ -1096,10 +1187,20 @@ a {
   align-content: center;
   font-weight: bolder;
 }
+@media (max-width: 480px) {
+  #home article .article-footer .item-value {
+    margin: 1rem 0 1rem 0;
+  }
+}
 #home article .article-footer .item-value #reduce {
   margin: 10px 30px 5px 0;
   color: #ff7d1a;
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  #home article .article-footer .item-value #reduce {
+    margin: 10px 90px 5px 0;
+  }
 }
 #home article .article-footer .item-value .article-value {
   margin: 6px;
@@ -1108,6 +1209,11 @@ a {
   margin: 10px 0 5px 30px;
   color: #ff7d1a;
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  #home article .article-footer .item-value #add {
+    margin: 10px 0 5px 90px;
+  }
 }
 #home article .article-footer button {
   background: #ff7d1a;
@@ -1125,6 +1231,10 @@ a {
   box-shadow: 3px 7px 20px #ff7d1a;
   transition: all 0.3s ease;
 }
+#home article .article-footer button svg {
+  line-height: 30px;
+  vertical-align: bottom;
+}
 
 .backdrop {
   position: fixed;
@@ -1135,6 +1245,13 @@ a {
   background: rgba(0, 0, 0, 0.75);
   z-index: 1;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .col-lg-5, .col-lg-7 {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .modal-container {

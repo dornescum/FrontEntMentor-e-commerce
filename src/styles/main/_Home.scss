@@ -2,22 +2,37 @@
   .wrapper {
     padding: 1rem;
     margin: 1rem;
+    @media (max-width: $xs) {
+      margin: 0;
+      padding: 0;
+    }
 
     .main-img {
       padding: 1rem 0;
       margin: 1rem 0;
       cursor: pointer;
 
+
       .active-img {
         width: 31rem;
         height: 31rem;
         border-radius: $radius;
+
+        @media (max-width: $xs) {
+          width: 23rem;
+          height: 23rem;
+          border-radius: 0;
+        }
       }
     }
 
     .multiple-img {
       @include display_flex;
       cursor: pointer;
+      @media (max-width: $xs) {
+        display: none;
+      }
+
 
       .thumb {
         //height: 1rem;
@@ -26,7 +41,7 @@
         //border-radius: $radius;
         //height: 6rem;
         //width: 6rem;
-      //border: 1px solid white;
+        //border: 1px solid white;
 
       }
 
@@ -68,13 +83,14 @@
 
     }
 
-    .cover{
+    .cover {
       //border: 2px solid $orange;
       opacity: .4;
       z-index: -1;
       cursor: pointer;
     }
-    .border-orange{
+
+    .border-orange {
       border: 2px solid $orange;
       z-index: 9999;
 
@@ -85,11 +101,18 @@
   article {
     padding: 2rem;
     margin: 2rem;
+    @media (max-width: $xs) {
+      padding: 10px;
+      margin: 10px;
+    }
 
     h5 {
       padding: 2rem 0 1rem 0;
       color: $orange;
       font-weight: bolder;
+      @media (max-width: $xs) {
+        padding: 0 0 1rem 0;
+      }
 
     }
 
@@ -97,65 +120,93 @@
       font-weight: bolder;
       font-size: $font-lg;
       letter-spacing: $letter-spacing;
-      p{
+      text-transform: capitalize;
+      @media (max-width: $xs) {
+        font-size: 2rem;
+      }
+
+      p {
         line-height: 55px;
-        margin:  0 0 2rem 0;
+        margin: 0 0 2rem 0;
+        @media (max-width: $xs) {
+          line-height: 38px;
+        }
       }
     }
 
     .article-description {
       color: $grey;
       font-size: 23px;
+      @media (max-width: $xs) {
+        font-size: 15px;
+      }
 
       p {
         line-height: 33px;
+        @media (max-width: $xs) {
+          line-height: 27px;
+        }
       }
     }
 
     .article-price {
-      @include flex-start;
-
-
-      .latest-price {
-        font-size: 28px;
-        padding: 5px 20px 5px 0;
-        font-weight: bolder;
-        //letter-spacing: $letter-spacing;
-        p {
-          margin: 0;
-        }
+      display: flex;
+      flex-direction: column;
+      @media (max-width: $xs) {
+        flex-direction: row;
+        justify-content: space-between;
       }
 
-      .deduction {
+      .new-price {
+        @include flex-start;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        p {
-          background: $l-orange;
-          color: $orange;
-          padding: 5px 10px;
-          border-radius: 5px;
+        .latest-price {
+          font-size: 28px;
+          padding: 5px 20px 5px 0;
           font-weight: bolder;
-          margin: 0;
-          font-size: 25px;
+          //letter-spacing: $letter-spacing;
+          p {
+            margin: 0;
+          }
+        }
+
+        .deduction {
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          p {
+            background: $l-orange;
+            color: $orange;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bolder;
+            margin: 0;
+            font-size: 25px;
+          }
+        }
+      }
+
+      .article-old-price {
+        color: $b-grey;
+        font-weight: bolder;
+
+        p {
+          text-decoration: line-through;
+          @media (max-width: $xs) {
+            margin: 8px 0 5px 20px;
+          }
         }
       }
     }
 
-    .article-old-price {
-      color: $b-grey;
-      font-weight: bolder;
-
-      p {
-        text-decoration: line-through;
-      }
-    }
 
     .article-footer {
-      //@include flex-sb;
       display: flex;
+      @media (max-width: $xs) {
+        flex-direction: column;
+      }
 
       .item-value {
         padding: 1.1rem 1rem;
@@ -164,47 +215,64 @@
         border-radius: $radius;
         @include display_flex;
         font-weight: bolder;
+        @media (max-width: $xs) {
+          margin: 1rem 0 1rem 0;
+        }
+
         #reduce {
           margin: 10px 30px 5px 0;
           color: $orange;
           cursor: pointer;
+          @media (max-width: $xs) {
+            margin: 10px 90px 5px 0;
+          }
         }
-        .article-value{
+
+        .article-value {
           margin: 6px;
         }
+
         #add {
           margin: 10px 0 5px 30px;
           color: $orange;
           cursor: pointer;
+          @media (max-width: $xs) {
+            margin: 10px 0 5px 90px;
+          }
         }
       }
 
-        button{
-          background: $orange;
-          padding: 1.1rem 1rem;
-          width: 100%;
-          border-radius: $radius;
-          outline: none;
-          border: none;
-          color: $white;
-          cursor: pointer;
-          box-shadow: $box-light;
-          font-weight: bolder;
-          &:hover{
-            box-shadow: $box-dark;
-            transition: $transition;
-          }
+      button {
+        background: $orange;
+        padding: 1.1rem 1rem;
+        width: 100%;
+        border-radius: $radius;
+        outline: none;
+        border: none;
+        color: $white;
+        cursor: pointer;
+        box-shadow: $box-light;
+        font-weight: bolder;
+
+        &:hover {
+          box-shadow: $box-dark;
+          transition: $transition;
         }
+
+        svg {
+          line-height: 30px;
+          vertical-align: bottom;
+
+        }
+
+      }
 
 
     }
 
   }
-
-
-
-
 }
+
 
 .backdrop {
   position: fixed;
@@ -216,3 +284,17 @@
   z-index: 1;
   cursor: pointer;
 }
+
+.col-lg-5, .col-lg-7 {
+  @media (max-width: $xs) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+//.container{
+//  @media (max-width: $xs) {
+//    //padding: 0 5px;
+//    margin: 0;
+//  }
+//}
