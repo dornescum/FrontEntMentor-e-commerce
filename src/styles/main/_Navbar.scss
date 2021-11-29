@@ -1,10 +1,11 @@
 .navbar {
   @include flex-sb;
   padding: 2rem 0 2rem 0;
-
+position: relative;
   border-bottom: 1px solid $l-grey;
 
   .navbar-left {
+    position: relative;
     @include flex-start;
       .logo{
         display: flex;
@@ -15,6 +16,7 @@
       list-style-type: none;
       @include display_flex;
       margin: 0;
+      position: relative;
       @media (max-width: $xs){
         display: none;
       }
@@ -23,6 +25,12 @@
         text-transform: capitalize;
         color: $grey;
         font-size: $font-base;
+        cursor: pointer;
+        transition: $transition;
+        &:hover{
+          border-bottom: 5px solid $orange;
+
+        }
 
       }
     }
@@ -44,6 +52,19 @@
     .cart-navbar{
       @include flex-img;
       padding: .1rem 3rem 0 0;
+      cursor: pointer;
+      .cart-value{
+        background: $orange;
+        border-radius: 12px;
+        position: absolute;
+        padding: 2px 13px;
+        top: 2rem;
+        right: 6rem;
+        color: #f7f8fd;
+      }
+      img{
+        height: 2rem;
+      }
     }
     .user-picture{
       @include flex-img;
@@ -54,4 +75,97 @@
       }
     }
   }
+
+    .show-card{
+      position: absolute;
+      top: 7rem;
+      background: $white;
+      width: 22rem;
+      height: 15rem;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border-radius: $radius;
+
+      .empty-cart{
+      @include display_flex;
+        margin: 5rem;
+
+      }
+
+
+      .cart-header{
+        padding: 8px 0 10px 15px;
+        border-bottom:1px solid $l-grey;
+        font-weight: bolder;
+      }
+      .cart-container{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        .cart-info{
+          display: flex;
+
+          .cart-img{
+            img{
+              padding: .5rem;
+              height: 4rem;
+              width: 4rem;
+              border-radius: $radius;
+            }
+
+          }
+
+
+          .cart-products{
+            display: flex;
+            flex-direction: column;
+
+            .cart-title{
+              p{
+                margin: 0;
+                padding: 5px;
+                color: $b-grey;
+              }
+            }
+
+            .cart-product{
+              padding: 0 0 0 5px;
+              color: $b-grey;
+              span {
+                font-weight: bolder;
+                color: $blue-main;
+                padding: 0 5px;
+              }
+            }
+          }
+
+          .delete-btn{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            padding: 0 7px;
+            img{
+              height: 1rem;
+            }
+          }
+        }
+
+
+        .checkout-btn{
+          background: $orange;
+          margin: 1rem .2rem;
+          padding: 1rem;
+          color: $white;
+          border-radius: $radius;
+          border: none;
+          outline: none;
+          font-weight: bolder;
+          cursor: pointer;
+        }
+      }
+    }
+
 }

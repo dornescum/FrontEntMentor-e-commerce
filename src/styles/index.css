@@ -815,9 +815,11 @@ a {
   justify-content: space-between;
   align-content: center;
   padding: 2rem 0 2rem 0;
+  position: relative;
   border-bottom: 1px solid #f7f8fd;
 }
 .navbar .navbar-left {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-content: center;
@@ -833,6 +835,7 @@ a {
   justify-content: center;
   align-content: center;
   margin: 0;
+  position: relative;
 }
 @media (max-width: 480px) {
   .navbar .navbar-left .navbar-links {
@@ -844,6 +847,11 @@ a {
   text-transform: capitalize;
   color: #68707d;
   font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navbar .navbar-left .navbar-links .links-li:hover {
+  border-bottom: 5px solid #ff7d1a;
 }
 .navbar .navbar-left .btn-sidebar {
   display: none;
@@ -864,6 +872,19 @@ a {
   justify-content: center;
   align-items: center;
   padding: 0.1rem 3rem 0 0;
+  cursor: pointer;
+}
+.navbar .navbar-right .cart-navbar .cart-value {
+  background: #ff7d1a;
+  border-radius: 12px;
+  position: absolute;
+  padding: 2px 13px;
+  top: 2rem;
+  right: 6rem;
+  color: #f7f8fd;
+}
+.navbar .navbar-right .cart-navbar img {
+  height: 2rem;
 }
 .navbar .navbar-right .user-picture {
   display: flex;
@@ -874,6 +895,81 @@ a {
   height: 4rem;
   width: 4rem;
   padding: 0 5px 0 0;
+}
+.navbar .show-card {
+  position: absolute;
+  top: 7rem;
+  background: white;
+  width: 22rem;
+  height: 15rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+.navbar .show-card .empty-cart {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 5rem;
+}
+.navbar .show-card .cart-header {
+  padding: 8px 0 10px 15px;
+  border-bottom: 1px solid #f7f8fd;
+  font-weight: bolder;
+}
+.navbar .show-card .cart-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.navbar .show-card .cart-container .cart-info {
+  display: flex;
+}
+.navbar .show-card .cart-container .cart-info .cart-img img {
+  padding: 0.5rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 1rem;
+}
+.navbar .show-card .cart-container .cart-info .cart-products {
+  display: flex;
+  flex-direction: column;
+}
+.navbar .show-card .cart-container .cart-info .cart-products .cart-title p {
+  margin: 0;
+  padding: 5px;
+  color: #b6bcc8;
+}
+.navbar .show-card .cart-container .cart-info .cart-products .cart-product {
+  padding: 0 0 0 5px;
+  color: #b6bcc8;
+}
+.navbar .show-card .cart-container .cart-info .cart-products .cart-product span {
+  font-weight: bolder;
+  color: #1d2025;
+  padding: 0 5px;
+}
+.navbar .show-card .cart-container .cart-info .delete-btn {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 0 7px;
+}
+.navbar .show-card .cart-container .cart-info .delete-btn img {
+  height: 1rem;
+}
+.navbar .show-card .cart-container .checkout-btn {
+  background: #ff7d1a;
+  margin: 1rem 0.2rem;
+  padding: 1rem;
+  color: white;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
 #home .wrapper {

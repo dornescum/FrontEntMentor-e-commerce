@@ -8,9 +8,9 @@ import thumb1 from '../images/image-product-1-thumbnail.jpg';
 import thumb2 from '../images/image-product-2-thumbnail.jpg';
 import thumb3 from '../images/image-product-3-thumbnail.jpg';
 import thumb4 from '../images/image-product-4-thumbnail.jpg';
-import {MdAdd, MdRemove, MdShoppingCart} from "react-icons/md";
-import Modal from "./Modal/Modal";
-import cart from '../images/icon-cart.svg';
+import {MdAdd, MdRemove} from "react-icons/md";
+// import Modal from "./Modal/Modal";
+// import cart from '../images/icon-cart.svg';
 import ModalContent from "./Modal/ModalContent";
 
 

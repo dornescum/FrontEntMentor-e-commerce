@@ -49,7 +49,6 @@ const ModalContent = () => {
 	};
 	const handleToggle = () => {
 
-		console.log(isActive.length);
 	};
 	return (
 		<div className="modal-container">
