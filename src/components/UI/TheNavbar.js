@@ -53,9 +53,9 @@ const TheNavbar = () => {
 
 			</div>
 			<div className="navbar-right">
-				<div className="cart-navbar" data-testid="cart-image">
+				<div className="cart-navbar" data-testid="cart-image" onClick={handleCard}>
 
-					<img src={cart} alt="cart image" onClick={handleCard}/>
+					<img src={cart} alt="cart image" />
 					{showCard && <div className="show-card">
 						<div className="cart-header">Cart</div>
 						<div className="cart-containing">

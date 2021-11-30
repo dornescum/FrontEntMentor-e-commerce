@@ -863,7 +863,7 @@ a {
   .navbar .navbar-left .btn-sidebar {
     display: block;
     background: white;
-    padding: 8px 10px 0 0;
+    padding: 8px 20px 0 0;
   }
 }
 .navbar .navbar-right {
@@ -1265,6 +1265,11 @@ a {
   align-content: center;
   padding: 1rem;
 }
+@media (max-width: 480px) {
+  .modal-container .thumb-modal {
+    display: none;
+  }
+}
 .modal-container .thumb-modal img {
   border: 2px solid transparent;
   border-radius: 1rem;
@@ -1285,6 +1290,11 @@ a {
   border: none;
   cursor: pointer;
 }
+@media (max-width: 480px) {
+  .modal-container .close-modal {
+    right: 20rem;
+  }
+}
 .modal-container .close-modal svg path {
   fill: white;
 }
@@ -1304,6 +1314,12 @@ a {
   border: none;
   outline: none;
 }
+@media (max-width: 480px) {
+  .modal-container .left-btn-modal {
+    left: 0.5rem;
+    top: 19rem;
+  }
+}
 .modal-container .left-btn-modal:hover svg path {
   stroke: #ff7d1a;
 }
@@ -1319,6 +1335,12 @@ a {
   cursor: pointer;
   border: none;
   outline: none;
+}
+@media (max-width: 480px) {
+  .modal-container .right-btn-modal {
+    right: 0.5rem;
+    top: 19rem;
+  }
 }
 .modal-container .right-btn-modal:hover svg path {
   stroke: #ff7d1a;
@@ -1338,6 +1360,12 @@ a {
   height: 35rem;
   width: 35rem;
   border-radius: 1rem;
+}
+@media (max-width: 480px) {
+  .show-modal .modal-main .active-modal-img {
+    height: 21rem;
+    width: 21rem;
+  }
 }
 
 aside {

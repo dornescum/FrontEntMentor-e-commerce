@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import TheNavbar from "./components/UI/TheNavbar";
 import Home from "./components/Home";
 import {ValueContext} from "./context/ValueContext";
+import TheFooter from "./components/UI/TheFooter";
 
 function App() {
     const [initialValue, setInitialValue]=useState(0);
@@ -17,6 +18,7 @@ function App() {
 			<div className="container">
 				<TheNavbar />
 				<Home />
+				<TheFooter />
 			</div>
 		</ValueContext.Provider>
 
