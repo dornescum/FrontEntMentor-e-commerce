@@ -72,9 +72,13 @@
         border-radius: 12px;
         position: absolute;
         padding: 2px 13px;
-        top: 2rem;
-        right: 6rem;
-        color: #f7f8fd;
+        top: 2.5rem;
+        right: 7rem;
+        color: $white;
+        @media (max-width: $xs){
+          top: 2rem;
+          right: 4rem;
+        }
       }
 
       img {

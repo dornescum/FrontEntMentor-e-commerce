@@ -24,7 +24,7 @@ const Home = () => {
 	const[overlay, setOverlay]=useState(false);
 	// const [showModal, setShowModal] = useState(false);
 
-	const handlerModal = () => {
+	const handlerModal = (arg) => {
 		setShowModal(!showModal);
 		setOverlay(!overlay)
 	};
@@ -82,13 +82,13 @@ const Home = () => {
 							<img src={img1} alt="snickers" className='active-img' onClick={handlerModal}/>
 						</div>}
 						{showImg2 && <div className="first-img">
-							<img src={img2} alt="snickers" className="active-img"/>
+							<img src={img2} alt="snickers" className="active-img" onClick={handlerModal}/>
 						</div>}
 						{showImg3 && <div className="first-img">
-							<img src={img3} alt="snickers" className="active-img"/>
+							<img src={img3} alt="snickers" className="active-img" onClick={handlerModal}/>
 						</div>}
 						{showImg4 && <div className="first-img">
-							<img src={img4} alt="snickers" className="active-img"/>
+							<img src={img4} alt="snickers" className="active-img" onClick={handlerModal}/>
 						</div>}
 
 

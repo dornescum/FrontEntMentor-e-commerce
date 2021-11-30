@@ -2,7 +2,7 @@ import React from 'react';
 
 const TheFooter = () => {
 	return (
-		<footer style={{padding: '2rem 0 1rem 2rem'}}>
+		<footer>
 			<div className="attribution">
 				Challenge by
 				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

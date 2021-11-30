@@ -18,7 +18,7 @@ const ModalContent = () => {
 	const [activeImg2, setActiveImg2] = useState(false);
 	const [activeImg3, setActiveImg3] = useState(false);
 	const [activeImg4, setActiveImg4] = useState(false);
-	const [isActive, setIsActive] = useState(images);
+	const [currentImg, setCurrentImg] = useState(0);
 	const handleImg1 = () => {
 		setActiveImg1(true);
 		setActiveImg2(false);
@@ -44,12 +44,26 @@ const ModalContent = () => {
 		setActiveImg4(true);
 	};
 
+	// const allImages =[];
+	// for (let i=0; i<images.length; i++){
+	// 	console.log(i);
+	// 	allImages.push(i)
+	// }
+
+	const toggleAdd = () => {
+		// setCurrentImg();
+		alert('not ready yet. imagine the pictures are changing :)');
+	};
+	const toggleRemove = () => {
+		// setCurrentImg();
+		alert('not ready yet. imagine the pictures are changing :)');
+	};
+
+
 	const closeModal = () => {
 		setShowModal(false);
 	};
-	const handleToggle = () => {
 
-	};
 	return (
 		<div className="modal-container">
 			<button onClick={closeModal} className="close-modal">
@@ -60,14 +74,14 @@ const ModalContent = () => {
 				</svg>
 			</button>
 			<div className="show-modal">
-				<div className="modal-main" onClick={handleToggle}>
+				<div className="modal-main">
 					{/*todo butoane stanga dreapta actiune*/}
-					<button className="left-btn-modal">
+					<button className="left-btn-modal" onClick={toggleRemove}>
 						<svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
 							<path d="M11 1 3 9l8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/>
 						</svg>
 					</button>
-					<button className="right-btn-modal">
+					<button className="right-btn-modal" onClick={toggleAdd}>
 						<svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
 							<path d="m2 1 8 8-8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/>
 						</svg>

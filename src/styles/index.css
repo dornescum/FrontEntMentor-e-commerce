@@ -888,9 +888,15 @@ a {
   border-radius: 12px;
   position: absolute;
   padding: 2px 13px;
-  top: 2rem;
-  right: 6rem;
-  color: #f7f8fd;
+  top: 2.5rem;
+  right: 7rem;
+  color: white;
+}
+@media (max-width: 480px) {
+  .navbar .navbar-right .cart-navbar .cart-value {
+    top: 2rem;
+    right: 4rem;
+  }
 }
 .navbar .navbar-right .cart-navbar img {
   height: 2rem;
@@ -1404,6 +1410,16 @@ aside {
   padding: 1rem;
   font-weight: bolder;
   text-transform: capitalize;
+}
+
+footer {
+  padding: 4rem 0 0 2rem;
+  position: relative;
+}
+@media (max-width: 480px) {
+  footer {
+    padding: 2rem 0 0.5rem 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

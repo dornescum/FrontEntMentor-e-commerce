@@ -1,0 +1,7 @@
+footer{
+  padding: 4rem 0 0  2rem;
+  position: relative;
+  @media (max-width:$xs){
+    padding: 2rem 0 .5rem .5rem;
+  }
+}
