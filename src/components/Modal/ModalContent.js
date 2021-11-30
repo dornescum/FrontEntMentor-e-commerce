@@ -8,9 +8,8 @@ import thumb2 from '../../images/image-product-2-thumbnail.jpg';
 import thumb3 from '../../images/image-product-3-thumbnail.jpg';
 import thumb4 from '../../images/image-product-4-thumbnail.jpg';
 import {ValueContext} from "../../context/ValueContext";
-// import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from "react-icons/md";
 
-const images = [img1, img2, img3, img4];
+// const images = [img1, img2, img3, img4];
 const ModalContent = () => {
 	const {showModal, setShowModal} = useContext(ValueContext);
 
@@ -18,7 +17,7 @@ const ModalContent = () => {
 	const [activeImg2, setActiveImg2] = useState(false);
 	const [activeImg3, setActiveImg3] = useState(false);
 	const [activeImg4, setActiveImg4] = useState(false);
-	const [currentImg, setCurrentImg] = useState(0);
+	// const [currentImg, setCurrentImg] = useState(0);
 	const handleImg1 = () => {
 		setActiveImg1(true);
 		setActiveImg2(false);
@@ -86,7 +85,6 @@ const ModalContent = () => {
 							<path d="m2 1 8 8-8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/>
 						</svg>
 					</button>
-					{/*active-modal-img*/}
 					<img src={img1} alt="snickers" className={activeImg1 ? 'active-modal-img' : 'modal-img'}/>
 					<img src={img2} alt="snickers" className={activeImg2 ? 'active-modal-img' : 'modal-img'}/>
 					<img src={img3} alt="snickers" className={activeImg3 ? 'active-modal-img' : 'modal-img'}/>

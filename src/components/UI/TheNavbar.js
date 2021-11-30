@@ -13,7 +13,6 @@ const navbarCategories = ['collections', 'men', 'women', 'about', 'contact'];
 const TheNavbar = () => {
 	const {initialValue, setInitialValue, showSidebar, setShowSidebar, productValue} = useContext(ValueContext);
 	const [showCard, setShowCard] = useState(false);
-	// const [cartValue, setCartValue] =useState(0);
 	const handleSidebar = () => {
 		setShowSidebar(!showSidebar);
 	};
@@ -79,13 +78,7 @@ const TheNavbar = () => {
 											<img src={deleteIcon} alt="delete"/>
 										</div>
 									</div>
-
-
 										<button className='checkout-btn'>Checkout</button>
-
-
-
-
 								</div>}
 						</div>
 					</div>}

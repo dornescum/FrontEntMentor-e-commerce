@@ -1,7 +1,7 @@
 import React, {useState} from "react";
+import {ValueContext} from "./context/ValueContext";
 import TheNavbar from "./components/UI/TheNavbar";
 import Home from "./components/Home";
-import {ValueContext} from "./context/ValueContext";
 import TheFooter from "./components/UI/TheFooter";
 
 function App() {
