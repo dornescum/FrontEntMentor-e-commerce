@@ -9,7 +9,7 @@ import thumb3 from '../../images/image-product-3-thumbnail.jpg';
 import thumb4 from '../../images/image-product-4-thumbnail.jpg';
 import {ValueContext} from "../../context/ValueContext";
 
-// const images = [img1, img2, img3, img4];
+const images = [img1, img2, img3, img4];
 const ModalContent = () => {
 	const {showModal, setShowModal} = useContext(ValueContext);
 
@@ -17,7 +17,7 @@ const ModalContent = () => {
 	const [activeImg2, setActiveImg2] = useState(false);
 	const [activeImg3, setActiveImg3] = useState(false);
 	const [activeImg4, setActiveImg4] = useState(false);
-	// const [currentImg, setCurrentImg] = useState(0);
+	const [currentImg, setCurrentImg] = useState(0);
 	const handleImg1 = () => {
 		setActiveImg1(true);
 		setActiveImg2(false);
@@ -43,11 +43,15 @@ const ModalContent = () => {
 		setActiveImg4(true);
 	};
 
-	// const allImages =[];
+	const allImages =[];
 	// for (let i=0; i<images.length; i++){
 	// 	console.log(i);
 	// 	allImages.push(i)
 	// }
+	// images.forEach((num, index) => {
+	// 	console.log(index, num);
+	//
+	// })
 
 	const toggleAdd = () => {
 		// setCurrentImg();

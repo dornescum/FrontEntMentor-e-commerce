@@ -72,20 +72,20 @@ const Home = () => {
 	return (
 		<div className="row" id="home">
 			{showModal && <div className='backdrop'><ModalContent /></div>}
-			<div className="col-lg-5">
+			<div className="col-lg-5" aria-label='left-column'>
 				<div className="wrapper" data-testid="left-wrapper">
 					<div className="main-img">
 						{showImg1 && <div className="first-img">
-							<img src={img1} alt="snickers" className='active-img' onClick={handlerModal}/>
+							<img src={img1} alt="snickers 1" className='active-img' onClick={handlerModal}/>
 						</div>}
 						{showImg2 && <div className="first-img">
-							<img src={img2} alt="snickers" className="active-img" onClick={handlerModal}/>
+							<img src={img2} alt="snickers " className="active-img" onClick={handlerModal}/>
 						</div>}
 						{showImg3 && <div className="first-img">
-							<img src={img3} alt="snickers" className="active-img" onClick={handlerModal}/>
+							<img src={img3} alt="snickers 3" className="active-img" onClick={handlerModal}/>
 						</div>}
 						{showImg4 && <div className="first-img">
-							<img src={img4} alt="snickers" className="active-img" onClick={handlerModal}/>
+							<img src={img4} alt="snickers 4" className="active-img" onClick={handlerModal}/>
 						</div>}
 
 
@@ -112,29 +112,29 @@ const Home = () => {
 				</div>
 
 			</div>
-			<div className="col-lg-7">
+			<div className="col-lg-7" aria-label='right-column'>
 				<div className="wrapper">
 					<article>
-						<h5>Sneaker Company</h5>
-						<div className="article-title">
+						<h5 aria-label='sneaker company'>Sneaker Company</h5>
+						<div className="article-title" aria-label='some title'>
 							<p>
 								Fall Limited edition sneakers
 							</p>
 						</div>
-						<div className="article-description">
+						<div className="article-description" data-testid='article info'>
 							<p>
 								These low-profile sneakers are your perfect casual wear
 								companion. Featuring a durable rubber outer sole, they'll
 								withstand everything the weather can offer.
 							</p>
 						</div>
-						<div className="article-price">
+						<div className="article-price" data-testid='price'>
 							<div className="new-price">
 								<div className="latest-price">
-									<p>$125.00</p>
+									<p aria-label='price'>$125.00</p>
 								</div>
 								<div className="deduction">
-									<p>50%</p>
+									<p aria-label='deduction'>50%</p>
 								</div>
 							</div>
 
@@ -156,7 +156,7 @@ const Home = () => {
 
 								<MdAdd id="add" onClick={addProduct}/>
 							</div>
-							<button onClick={handleCart} className="btn-cart">
+							<button onClick={handleCart} className="btn-cart" aria-label='button'>
 								<svg width="40" height="22" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#ffffff" fillRule="nonzero"/></svg>
 								Add to cart
 							</button>

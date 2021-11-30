@@ -42,7 +42,7 @@ const TheNavbar = () => {
 				</aside>}
 				{showSidebar && <Backdrop onClick={handleSidebar}/>}
 				<div className="logo">
-					<img src={logo} alt="some logo"/>
+					<img src={logo} alt="snickers logo"/>
 				</div>
 				<ul className="navbar-links">
 					{navbarCategories.map((el, index) => {
